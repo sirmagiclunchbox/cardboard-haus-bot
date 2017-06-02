@@ -1,0 +1,26 @@
+{
+  "name": "twitter-bot",
+  "version": "1.0.0",
+  "description": "A bot that will communicate commands made by users on a discord channel to execute and interact with the Twitter API.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirmagiclunchbox/cardboard-haus-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "twitter",
+    "api",
+    "community"
+  ],
+  "author": "Derek Pruitt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirmagiclunchbox/cardboard-haus-bot/issues"
+  },
+  "homepage": "https://github.com/sirmagiclunchbox/cardboard-haus-bot#readme"
+}
