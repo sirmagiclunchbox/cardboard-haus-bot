@@ -1,6 +1,6 @@
 {
   "name": "twitter-bot",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A bot that will communicate commands made by users on a discord channel to execute and interact with the Twitter API.",
   "main": "bot.js",
   "scripts": {
