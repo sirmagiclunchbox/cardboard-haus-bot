@@ -4,19 +4,27 @@ var Twit = require('twit');
 var config = require('./config');
 var T = new Twit(config);
 
-//
-//  tweet 'hello world!'
-//
-T.post('statuses/update', { status: 'hello world!' }, function(err, data, response) {
-  console.log(data)
-})
-var params = {
-  q: 'banana since:2011-07-11',
-  count: 2
+var stream = T.stream('user');
+stream.on('follow', followed);
+
+function followed(eventMsg) {
+    console.log('follow event')
+    var name = eventMsg.source.name;
+    var screenName = eventMsg.source.screen_name;
+    tweetResponse('@' + screenName + ' whats up my dude!?');
 }
 
-T.get('search/tweets', params, gotData);
+function tweetResponse(txt){
+  var tweet = {
+    status: txt
+  }
 
-function gotData(err, data, response) {
-  console.log(data)
+  T.post('statuses/update', tweet, tweeted);
+
+  function tweeted(err, data, response) {
+    if (err) {
+      console.log("Something went wrong!");
+    } else {
+        console.log("It's working!")
+    }}
 }
